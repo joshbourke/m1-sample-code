@@ -36,10 +36,32 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </name>
+                        <enabled_by_default translate="label">
+                            <label>Enabled for All Products by Default</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Select "Yes" to apply <strong style="color:red">a flat rate to all products by default</strong>. You can override the default
+                                     price on a per-product basis by entering a flat-rate price when editing a product.]]></comment>
+                        </enabled_by_default>
+                        <default_price translate="label">
+                            <label>Default Price</label>
+                            <frontend_type>text</frontend_type>
+                            <depends><enabled_by_default>1</enabled_by_default></depends>
+                            <validate>validate-number validate-zero-or-greater</validate>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[<strong>Required</strong> if you want to apply a default a flat-rate to all products.]]></comment>
+                        </default_price>
                         <specificerrmsg translate="label">
                             <label>Displayed Error Message</label>
                             <frontend_type>textarea</frontend_type>
-                            <sort_order>4</sort_order>
+                            <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>

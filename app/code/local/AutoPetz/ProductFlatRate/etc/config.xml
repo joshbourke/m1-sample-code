@@ -1,20 +1,31 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <AutoPetz_Shipping>
+        <AutoPetz_ProductFlatRate>
             <version>1.0.0</version>
             <depends>
                 <Mage_Shipping />
             </depends>
-        </AutoPetz_Shipping>
+        </AutoPetz_ProductFlatRate>
     </modules>
+    <global>
+        <resources>
+            <productflatrate_setup>
+                <setup>
+                    <module>AutoPetz_ProductFlatRate</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+            </productflatrate_setup>
+        </resources>
+    </global>
     <default>
         <carriers>
             <autopetz_flatratebyproduct>
-                <model>autopetz_shipping/carrier</model>
+                <model>autopetz_productflatrate/carrier</model>
                 <active>0</active>
-                <title>Flat Rate by Product</title>
-                <name>Flat Rate</name>
+                <title>Flat Rate</title>
+                <name>Fixed</name>
+                <enabled_by_default>0</enabled_by_default>
                 <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg>
                 <sallowspecific>0</sallowspecific>
             </autopetz_flatratebyproduct>

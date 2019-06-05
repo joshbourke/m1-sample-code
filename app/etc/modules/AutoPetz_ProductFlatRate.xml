@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <AutoPetz_Shipping>
+        <AutoPetz_ProductFlatRate>
             <active>true</active>
             <codePool>local</codePool>
-        </AutoPetz_Shipping>
+        </AutoPetz_ProductFlatRate>
     </modules>
 </config>
