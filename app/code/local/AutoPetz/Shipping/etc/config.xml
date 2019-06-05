@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <AutoPetz_Shipping>
+            <version>1.0.0</version>
+            <depends>
+                <Mage_Shipping />
+            </depends>
+        </AutoPetz_Shipping>
+    </modules>
+    <default>
+        <carriers>
+            <autopetz_flatratebyproduct>
+                <model>autopetz_shipping/carrier</model>
+                <active>0</active>
+                <title>Flat Rate by Product</title>
+                <name>Flat Rate</name>
+                <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg>
+                <sallowspecific>0</sallowspecific>
+            </autopetz_flatratebyproduct>
+        </carriers>
+    </default>
+</config>
