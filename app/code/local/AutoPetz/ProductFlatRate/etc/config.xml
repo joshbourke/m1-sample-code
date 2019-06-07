@@ -9,6 +9,7 @@
         </AutoPetz_ProductFlatRate>
     </modules>
     <global>
+        <!--Setup class for installing the shipping cost attribute-->
         <resources>
             <productflatrate_setup>
                 <setup>
@@ -17,11 +18,27 @@
                 </setup>
             </productflatrate_setup>
         </resources>
+        <!--Accommodate for the -_- autoloader-->
+        <models>
+            <autoPetz_productFlatRate>
+                <class>AutoPetz_ProductFlatRate_Model</class>
+            </autoPetz_productFlatRate>
+        </models>
+        <!--Make our attribute available everywhere-->
+        <sales>
+            <quote>
+                <item>
+                    <product_attributes>
+                        <flat_rate_shipping_price/>
+                    </product_attributes>
+                </item>
+            </quote>
+        </sales>
     </global>
     <default>
         <carriers>
             <autopetz_flatratebyproduct>
-                <model>autopetz_productflatrate/carrier</model>
+                <model>autoPetz_productFlatRate/carrier_flatRate</model>
                 <active>0</active>
                 <title>Flat Rate</title>
                 <name>Fixed</name>

@@ -1,15 +1,18 @@
 <?php
 /**
- * AutoPetz Shipping Setup Installer
+ * AutoPetz ProductFlatRate Setup Installer
+ *
  * Adds EAV attribute to products for setting Flat Rates.
  */
+
+use AutoPetz_ProductFlatRate_Helper_Definitions as Definitions;
 
 /* @var $this \Mage_Eav_Model_Entity_Setup */
 $installer = $this;
 $installer->startSetup();
 $installer->addAttribute(
     Mage_Catalog_Model_Product::ENTITY,
-    AutoPetz_ProductFlatRate_Helper_Definitions::ATTRIBUTE_CODE_SHIPPING_PRICE,
+    Definitions::ATTRIBUTE_CODE_FLAT_RATE_SHIPPING_PRICE,
     [
         'group'            => 'Prices',
         'type'             => 'decimal',
