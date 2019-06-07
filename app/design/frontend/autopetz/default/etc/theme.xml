@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<theme>
+    <parent>rwd/default</parent>
+    <layout>
+        <updates>
+            <autopetz>
+                <file>child.xml</file>
+            </autopetz>
+        </updates>
+    </layout>
+</theme>
