@@ -5815,11 +5815,13 @@ p.product-name a:hover {
     text-align: left;
   }
 }
-.block-related .mini-products-list {
-  content: '';
-  display: table;
-  clear: both;
-  width: 100%;
+@media only screen and (min-width: 770px) {
+  .block-related .mini-products-list {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
 .block-related li.item {
   margin: 0 auto 10px;
@@ -5827,10 +5829,12 @@ p.product-name a:hover {
 }
 @media only screen and (min-width: 770px) {
   .block-related li.item {
-    width: 23.5%;
-    float: left;
-    margin-right: 2%;
     clear: none;
+    flex: 0 0 23.5%;
+    float: left;
+    margin-left: 0;
+    margin-right: 2%;
+    max-width: 23.5%;
   }
   .block-related li.item:nth-child(4n+4) {
     margin-right: 0;

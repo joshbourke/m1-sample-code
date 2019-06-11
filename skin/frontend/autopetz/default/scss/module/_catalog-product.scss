@@ -869,8 +869,12 @@
     }
 
     .mini-products-list {
-        @include clearfix;
-        width: 100%;
+        @include bp(min-width, $bp-medium) {
+            align-items: stretch;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
     }
 
     li.item {
@@ -878,10 +882,12 @@
         max-width: 320px;
 
         @include bp(min-width, $bp-medium) {
-            width: 23.5%;
-            float: left;
-            margin-right: 2%;
             clear: none;
+            flex: 0 0 23.5%;
+            float: left;
+            margin-left: 0;
+            margin-right: 2%;
+            max-width: 23.5%;
 
             &:nth-child(4n+4) {
                 margin-right: 0;
