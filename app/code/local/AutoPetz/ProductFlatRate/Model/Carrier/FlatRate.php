@@ -150,7 +150,7 @@ class AutoPetz_ProductFlatRate_Model_Carrier_FlatRate
      */
     public function getProductShippingPrice(Mage_Catalog_Model_Product $product, $useDefault = true)
     {
-        $price = $product->getData(Definitions::ATTRIBUTE_CODE_FLAT_RATE_SHIPPING_PRICE);
+        $price = $product->getData(Definitions::$_ATTRIBUTE_CODE_FLAT_RATE_SHIPPING_PRICE);
         if ($price !== null) {
             return (float)$price;
         } elseif ($useDefault) {

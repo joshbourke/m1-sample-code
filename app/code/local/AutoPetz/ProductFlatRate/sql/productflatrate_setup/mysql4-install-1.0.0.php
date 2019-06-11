@@ -12,7 +12,7 @@ $installer = $this;
 $installer->startSetup();
 $installer->addAttribute(
     Mage_Catalog_Model_Product::ENTITY,
-    Definitions::ATTRIBUTE_CODE_FLAT_RATE_SHIPPING_PRICE,
+    Definitions::$_ATTRIBUTE_CODE_FLAT_RATE_SHIPPING_PRICE,
     [
         'group'            => 'Prices',
         'type'             => 'decimal',
